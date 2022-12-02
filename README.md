@@ -1,10 +1,10 @@
 # Brad's Movie Lookup App
 Webapp to search for movies and display information about them - Made with React.
 
-<img src="/src/assets/moviesGif.gif">
-
 ### Live Demo Deployed @
 https://brthomiu.github.io/movie-app/
+
+<img src="/src/assets/moviesGif.gif">
 
 ## Functionality
 Fetches data from a remote API and uses it to render a list of movie card components.
