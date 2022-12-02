@@ -1,0 +1,432 @@
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-dark: rgb(32, 32, 32);
+  --color-light: rgb(24, 78, 122);
+  --color-primary: rgb(16, 109, 163);
+  --color-primary-dark: rgb(12, 84, 126);
+  --color-primary-light: rgb(25, 120, 175);
+  --color-secondary: rgb(9, 53, 88);
+  --color-accent: rgb(14, 67, 110);
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+button {
+  background-color: var(--color-accent);
+  border-radius: 10px;
+  border: rgba(0, 0, 0, 0) 0px solid;
+  box-shadow: rgba(0, 0, 0, 0.2) -4px 4px 4px;
+  color: var(--color-white);
+  cursor: pointer;
+  font-weight: 600;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.BigButton {
+  height: 60px;
+  width: 100px;
+}
+
+button:hover {
+  background-color: var(--color-primary-dark);
+  box-shadow: rgba(0, 0, 0, 0.3) -4px 4px 4px;
+}
+
+button:active {
+  background-color: var(--color-accent);
+}
+
+button:not(:hover) {
+  transition: all 0.3s ease-in-out;
+}
+
+.noStyle {
+  all: unset;
+}
+.noStyle:hover {
+  all: unset;
+}
+
+.MovieCardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.Header__Menu {
+  background-color: var(--color-secondary);
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 2px;
+  display: flex;
+  height: 45px;
+  justify-content: space-between;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.Header__Left {
+  display: flex;
+  max-width: 1500px;
+  padding: 10px;
+  width: 120%;
+  z-index: 10;
+}
+
+.ToggleGenresButton {
+  margin-right: 20px;
+  width: 250px;
+}
+
+.Header__MenuIcon {
+  height: 30px;
+  width: 30px;
+}
+
+.Search {
+  align-self: center;
+  height: 42px;
+  margin: 0 15px;
+  max-width: 800px;
+  width: 60%;
+}
+
+.GenreContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.GenreTagsContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  padding: 0 20px;
+  position: relative;
+  top: 100px;
+}
+
+.ShowGenreButton {
+  padding: 5px 20px;
+  width: 200px;
+}
+
+.GenreContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+}
+
+.GenreTags {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.GenreTagButton {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: rgba(0, 0, 0, 0.3) 1px solid;
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 4px 4px;
+}
+
+.GenreTagButton:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: rgba(0, 0, 0, 0.3) 1px solid;
+  box-shadow: rgba(0, 0, 0, 0.2) -4px 4px 4px;
+}
+
+.GenreTagButtonOn {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: rgba(0, 0, 0, 0) 1px solid;
+}
+
+.GenreTagButtonOn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: rgba(0, 0, 0, 0) 1px solid;
+  box-shadow: rgba(0, 0, 0, 0.3) -4px 4px 4px;
+}
+
+.MovieCard {
+  align-items: center;
+  background-color: var(--color-dark);
+  box-shadow: rgba(0, 0, 0, 0.6) -4px 6px 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin: 15% auto -5%;
+  max-width: 400px;
+  width: 400px;
+}
+
+.MovieInfo {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  font-size: larger;
+  height: 600px;
+  justify-content: flex-end;
+  max-width: 400px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.MovieTitle {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: row;
+  font-size: medium;
+  height: 110px;
+  justify-content: center;
+  max-width: 400px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.MovieInfo h1 {
+  position: absolute;
+  right: 20px;
+  top: -20px;
+}
+
+.MovieInfo h1:hover {
+  cursor: pointer;
+  scale: 120%;
+  transition: all 0.3s ease-in-out;
+}
+
+.MovieInfo h1:not(hover) {
+  transition: all 0.3s ease-in-out;
+}
+
+.MovieInfo h2 {
+  margin-top: 60%;
+}
+
+.MovieCardInfo {
+  background-color: var(--color-dark);
+  cursor: pointer;
+  height: 600px;
+  width: 400px;
+}
+
+.MovieDetailsButton {
+  font-size: x-large;
+  margin-bottom: 150px;
+  margin-top: 15px;
+  padding: 25px 60px;
+}
+
+.MovieBox {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 0;
+  height: 600px;
+  max-width: 400px;
+  position: absolute;
+  width: 100%;
+}
+
+.MovieBox:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  display: flex;
+  height: 600px;
+}
+
+.MovieBox:not(:hover) {
+  transition: all 0.4s ease-in-out;
+}
+
+.ModalContainer {
+  align-items: center;
+  background-color: var(--color-secondary);
+  box-shadow: rgba(0, 0, 0, 0.7) -14px 18px 50px;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  margin-top: 5%;
+  margin: auto;
+  max-width: 1200px;
+  overflow: auto;
+  text-align: center;
+  width: auto;
+}
+
+.CloseModalButton {
+  font-size: larger;
+  height: 50px;
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+.DetailsForm {
+  color: -var(--color-white);
+  height: fit-content;
+  width: 95%;
+}
+
+.MovieBanner {
+  margin-bottom: -10px;
+  width: 100%;
+}
+
+.CastList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: -10px;
+}
+
+.CastList h2 {
+  margin: 0 15px;
+}
+
+.NoMoreMovies {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 120px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.Footer {
+  align-items: center;
+  background-color: var(--color-secondary);
+  bottom: 0px;
+  display: flex;
+  height: 20px;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.Footer a {
+  color: var(--color-white);
+  padding: 5px;
+  text-decoration: none;
+}
+
+/* Set of media queries at every 420px increment
+    based around fixed thumbnail size of 400px 
+    scales from mobile up to 4k*/
+
+@media screen and (min-width: 2501px) {
+  .MovieCardContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  .GenreTags {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 2500px) {
+  .MovieCardContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+  .GenreTags {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  .ModalContainer {
+    max-width: 1000px;
+  }
+}
+
+@media screen and (max-width: 2080px) {
+  .MovieCardContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .GenreTags {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  .ModalContainer {
+    max-width: 750px;
+  }
+}
+
+@media screen and (max-width: 1660px) {
+  .MovieCardContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .GenreTags {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  .ModalContainer {
+    max-width: 700px;
+  }
+
+}
+
+@media screen and (max-width: 1240px) {
+  .MovieCardContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+  .GenreTags {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .MovieCardContainer {
+    grid-template-columns: 1fr;
+  }
+  .MovieCard {
+    max-width: 350px;
+  }
+  .MoviePoster {
+    max-width: 350px;
+  }
+  .MovieBox {
+    max-height: 525px;
+    max-width: 350px;
+  }
+  .MovieInfo {
+    max-height: 525px;
+    max-width: 350px;
+  }
+  .MovieTitle {
+    font-size: small;
+    height: 95px;
+    max-width: 350px;
+    width: 100%;
+  }
+  .GenreTags {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .CastList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: -10px;
+  }
+  .CastList h2 {
+    margin: 5px;
+  }
+  .ModalContainer {
+    font-size: smaller;
+    margin-top: 45px;
+    padding: -10px;
+  }
+  .GenreContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
